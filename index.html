@@ -60,7 +60,7 @@
 
             <div class="flex flex-col md:flex-row gap-8 items-start">
                 
-                <div class="w-full md:w-3/4 order-2 md:order-1">                    
+                <div class="w-full md:w-3/4 order-2 md:order-1">                  
                     <div class="prose text-gray-700 space-y-4 leading-7 text-[1.05rem]">
                         <p>
                             I am a senior at <span class="font-semibold text-gray-900">Purdue University</span> pursuing a B.S. in Computer Science with a minor in Mathematics.
@@ -75,8 +75,20 @@
                 </div>
 
                 <div class="w-full md:w-1/4 flex-shrink-0 order-1 md:order-2">
-                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden relative shadow-sm border border-gray-100">
-                        <img src="profile.jpg" alt="Paul Jiang" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Paul+Jiang&background=random&size=200'">
+                    
+                    <!-- NEW: Academic Photo Frame Effect -->
+                    <!-- Removed rounded-lg, added white padding (p-1.5), and a specific drop shadow -->
+                    <div class="bg-white p-1.5 border border-gray-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                        <div class="aspect-square relative bg-gray-50 overflow-hidden">
+                            <img 
+                                src="profile.jpg" 
+                                alt="Paul Jiang" 
+                                class="w-full h-full object-cover" 
+                                onerror="this.src='https://ui-avatars.com/api/?name=Paul+Jiang&background=random&size=200'"
+                            >
+                            <!-- Inner subtle border for photo realism -->
+                            <div class="absolute inset-0 border border-black/5 pointer-events-none"></div>
+                        </div>
                     </div>
 
                     <div class="mt-4 flex flex-col space-y-2">
@@ -265,7 +277,7 @@
                         <h3 class="text-base font-bold text-gray-900">NSF I-GUIDE</h3>
                         <div class="text-sm font-medium text-gray-700">Geospatial Data Science Research Intern</div>
                         <p class="text-sm text-gray-600 mt-1">
-                             Optimized social vulnerability analysis of aging dam infrastructure using Apache Spark and Sedona.
+                              Optimized social vulnerability analysis of aging dam infrastructure using Apache Spark and Sedona.
                         </p>
                     </div>
                     <div class="text-xs font-mono text-gray-500 text-right pt-0.5">Aug 2024 - May 2025</div>
