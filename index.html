@@ -32,13 +32,14 @@
 
     <style>
         html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 6rem; }
         .prose-link { @apply text-academic-blue hover:text-blue-800 underline decoration-1 underline-offset-2 transition-colors; }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
+<body class="bg-white text-gray-800 font-sans leading-relaxed selection:bg-academic-blue selection:text-white">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <a href="#" class="font-serif font-bold text-xl text-gray-900 tracking-tight">Paul Jiang</a>
@@ -46,6 +47,7 @@
                 
                 <div class="hidden sm:flex items-center space-x-8">
                     <a href="#about" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">About</a>
+                    <a href="#news" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">News</a>
                     <a href="#publications" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">Research</a>
                     <a href="#experience" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">Experience</a>
                 </div>
@@ -53,37 +55,37 @@
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
 
-        <section id="about" class="scroll-mt-24">
-            <div class="flex flex-col md:flex-row gap-10 items-start">
-                <div class="w-full md:w-1/3 flex-shrink-0">
-                    <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden relative shadow-md">
-                        <img src="profile.jpg" alt="Paul Jiang" class="w-full h-full object-cover">
+        <section id="about">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="w-full md:w-1/4 flex-shrink-0">
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden relative shadow-sm border border-gray-100">
+                        <img src="profile.jpg" alt="Paul Jiang" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Paul+Jiang&background=random&size=200'">
                     </div>
                     
-                    <div class="mt-6 flex flex-col space-y-3">
-                        <a href="mailto:jiang861@purdue.edu" class="flex items-center text-gray-600 hover:text-academic-blue transition-colors">
-                            <i class="fas fa-envelope w-6 text-center"></i>
-                            <span class="ml-2 text-sm">jiang861@purdue.edu</span>
+                    <div class="mt-4 flex flex-col space-y-2">
+                        <a href="mailto:jiang861@purdue.edu" class="flex items-center group">
+                            <div class="w-8 flex justify-center text-gray-400 group-hover:text-academic-blue transition-colors"><i class="fas fa-envelope"></i></div>
+                            <span class="text-sm text-gray-600 group-hover:text-academic-blue transition-colors">Email</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/pauljiang03" target="_blank" class="flex items-center text-gray-600 hover:text-academic-blue transition-colors">
-                            <i class="fab fa-linkedin w-6 text-center"></i>
-                            <span class="ml-2 text-sm">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/pauljiang03" target="_blank" class="flex items-center group">
+                            <div class="w-8 flex justify-center text-gray-400 group-hover:text-academic-blue transition-colors"><i class="fab fa-linkedin"></i></div>
+                            <span class="text-sm text-gray-600 group-hover:text-academic-blue transition-colors">LinkedIn</span>
                         </a>
-                         <a href="cv.pdf" class="flex items-center text-gray-600 hover:text-academic-blue transition-colors">
-                            <i class="fas fa-file-pdf w-6 text-center"></i>
-                            <span class="ml-2 text-sm">CV</span>
+                         <a href="cv.pdf" class="flex items-center group">
+                            <div class="w-8 flex justify-center text-gray-400 group-hover:text-academic-blue transition-colors"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-sm text-gray-600 group-hover:text-academic-blue transition-colors">Curriculum Vitae</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="w-full md:w-2/3">
-                    <h1 class="text-4xl font-serif font-bold text-gray-900 mb-2">Paul Jiang</h1>
+                <div class="w-full md:w-3/4">
+                    <h1 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Paul Jiang</h1>
                     
-                    <div class="prose text-gray-700 space-y-4">
+                    <div class="prose text-gray-700 space-y-3 leading-7 text-[1.05rem]">
                         <p>
-                            I am a senior at <span class="font-semibold">Purdue University</span> (John Martinson Honors College) pursuing a B.S. in Computer Science with a minor in Mathematics.
+                            I am a senior at <span class="font-semibold text-gray-900">Purdue University</span> (John Martinson Honors College) pursuing a B.S. in Computer Science with a minor in Mathematics.
                         </p>
                         <p>
                             My research interests lie in <strong>High Performance Computing (HPC)</strong>, <strong>Formal Methods</strong>, and <strong>Systems</strong>. I am particularly interested in characterizing numerical deviations in AI hardware and verifying the correctness of emerging arithmetic realizations.
@@ -91,160 +93,148 @@
                         <p>
                             Currently, I am working with <a href="#" class="prose-link">Prof. Ganesh Gopalakrishnan</a> at the University of Utah on formally characterizing Tensor Core arithmetic, and with <a href="#" class="prose-link">Prof. Jingbo Wang</a> at Purdue on differential Zonotope-based verification of Vision Transformers.
                         </p>
-                        <p>
-                            ...
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="news" class="scroll-mt-24 border-t border-gray-100 pt-10">
-            <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">News</h2>
-            <div class="space-y-4">
+        <section id="news" class="border-t border-gray-200 pt-8">
+            <h2 class="text-xl font-serif font-bold text-gray-900 mb-4">News</h2>
+            <div class="space-y-3">
                 
-                <div class="flex gap-4">
-                    <span class="font-mono text-sm text-gray-500 whitespace-nowrap pt-1">Nov 2025</span>
-                    <div class="flex flex-col gap-3">
-                        <p class="text-gray-700">Presented poster at <span class="font-semibold">SC '25</span> in St. Louis (ACM SRC 2nd Place!).</p>
-                        <img src="sc25award.jpg" alt="ACM SRC Award" class="w-64 rounded-md shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                <div class="flex gap-4 items-start">
+                    <span class="font-mono text-xs text-gray-500 whitespace-nowrap pt-1 w-20 text-right">Nov 2025</span>
+                    <div class="flex flex-col gap-2">
+                        <p class="text-gray-800">Presented poster at <span class="font-semibold">SC '25</span> in St. Louis (ACM SRC 2nd Place!).</p>
+                        <img src="sc25award.jpg" alt="ACM SRC Award" class="w-48 rounded shadow-sm border border-gray-100" onerror="this.style.display='none'">
                     </div>
                 </div>
 
-                <div class="flex gap-4">
-                    <span class="font-mono text-sm text-gray-500 whitespace-nowrap pt-1">Nov 2025</span>
-                    <p class="text-gray-700">Speaker at the 2nd Workshop on Correctness and Reproducibility for Earth System Software.</p>
+                <div class="flex gap-4 items-start">
+                    <span class="font-mono text-xs text-gray-500 whitespace-nowrap pt-1 w-20 text-right">Nov 2025</span>
+                    <p class="text-gray-800">Speaker at the 2nd Workshop on Correctness and Reproducibility for Earth System Software.</p>
                 </div>
-                <div class="flex gap-4">
-                    <span class="font-mono text-sm text-gray-500 whitespace-nowrap pt-1">Sep 2025</span>
-                    <p class="text-gray-700">Started as Project Manager for ML@Purdue x TE Connectivity.</p>
+                <div class="flex gap-4 items-start">
+                    <span class="font-mono text-xs text-gray-500 whitespace-nowrap pt-1 w-20 text-right">Sep 2025</span>
+                    <p class="text-gray-800">Started as Project Manager for ML@Purdue x TE Connectivity.</p>
                 </div>
-                 <div class="flex gap-4">
-                    <span class="font-mono text-sm text-gray-500 whitespace-nowrap pt-1">May 2025</span>
-                    <p class="text-gray-700">Joined University of Utah as a Research Assistant under Prof. Ganesh Gopalakrishnan.</p>
+                 <div class="flex gap-4 items-start">
+                    <span class="font-mono text-xs text-gray-500 whitespace-nowrap pt-1 w-20 text-right">May 2025</span>
+                    <p class="text-gray-800">Joined University of Utah as a Research Assistant under Prof. Ganesh Gopalakrishnan.</p>
                 </div>
             </div>
         </section>
 
-        <section id="publications" class="scroll-mt-24 border-t border-gray-100 pt-10">
-            <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Research</h2>
-            <div class="space-y-12">
+        <section id="publications" class="border-t border-gray-200 pt-8">
+            <h2 class="text-xl font-serif font-bold text-gray-900 mb-6">Research</h2>
+            <div class="space-y-8">
                 
-                <div class="group">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                <article class="group">
+                    <h3 class="text-base font-bold text-gray-900 mb-1">
                         Characterizing and Correcting Tensor Core Arithmetic
                     </h3>
-                    <div class="text-gray-700 mb-2">
-                        <span class="font-semibold underline">Paul Jiang</span>, B. Valpey, and G. Gopalakrishnan
+                    <div class="text-gray-700 text-sm mb-1">
+                        <span class="font-semibold border-b border-gray-300">Paul Jiang</span>, B. Valpey, and G. Gopalakrishnan
                     </div>
-                    <div class="text-sm text-gray-500 italic mb-2">
+                    <div class="text-sm text-gray-500 italic">
                         Under review at ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI '26)
                     </div>
-                </div>
+                </article>
 
-                <div class="group">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                <article class="group">
+                    <h3 class="text-base font-bold text-gray-900 mb-1">
                         A Formal Characterization of Non-Monotonicity in Tensor Cores
                     </h3>
-                    <div class="text-gray-700 mb-2">
-                        <span class="font-semibold underline">Paul Jiang</span> and V. Zheng
+                    <div class="text-gray-700 text-sm mb-1">
+                        <span class="font-semibold border-b border-gray-300">Paul Jiang</span> and V. Zheng
                     </div>
-                    <div class="text-sm text-gray-500 italic mb-3">
+                    <div class="text-sm text-gray-500 italic mb-2">
                         Poster at SC '25 (ACM Student Research Competition 2nd Place)
                     </div>
                     
-                    <div class="mt-3">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Poster Preview</span>
-                            <a href="sc25poster.pdf" target="_blank" class="text-xs font-medium text-academic-blue hover:underline">
-                                <i class="fas fa-file-pdf mr-1"></i> View High-Res PDF
-                            </a>
-                        </div>
-                        <img src="sc25poster.jpg" alt="SC '25 Poster" loading="lazy" class="w-full md:w-3/4 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center gap-2">
+                        <a href="sc25poster.pdf" target="_blank" class="inline-flex items-center px-2 py-1 bg-gray-50 text-xs font-medium text-gray-700 hover:text-academic-blue border border-gray-200 rounded transition-colors">
+                            <i class="fas fa-file-pdf mr-1.5"></i> PDF
+                        </a>
+                        <span class="text-xs text-gray-400">|</span>
+                        <a href="#" class="text-xs text-gray-500 hover:text-academic-blue">View Poster Image</a>
                     </div>
-                </div>
+                </article>
 
-                <div class="group">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                <article class="group">
+                    <h3 class="text-base font-bold text-gray-900 mb-1">
                          Formal Approaches to Characterize Emerging Arithmetic Realizations
                     </h3>
-                    <div class="text-gray-700 mb-2">
-                        <span class="font-semibold underline">Paul Jiang</span> and I. Lin
-                    </div>
-                    <div class="text-sm text-gray-500 italic mb-3">
-                        Poster at SC '24
-                    </div>
-                    
-                    <div class="mt-3">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Poster Preview</span>
-                            <a href="sc24poster.pdf" target="_blank" class="text-xs font-medium text-academic-blue hover:underline">
-                                <i class="fas fa-file-pdf mr-1"></i> View High-Res PDF
-                            </a>
-                        </div>
-                        <img src="sc24poster.jpg" alt="SC '24 Poster" loading="lazy" class="w-full md:w-3/4 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                    </div>
-                </div>
-
-                <div class="group">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-1">
-                        Evaluating the Impact of Noisy Point Clouds on Wireless Gesture Recognition Systems
-                    </h3>
-                    <div class="text-gray-700 mb-2">
-                        <span class="font-semibold underline">Paul Jiang</span>, E. Fassman, et al.
+                    <div class="text-gray-700 text-sm mb-1">
+                        <span class="font-semibold border-b border-gray-300">Paul Jiang</span> and I. Lin
                     </div>
                     <div class="text-sm text-gray-500 italic mb-2">
+                        Poster at SC '24
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <a href="sc24poster.pdf" target="_blank" class="inline-flex items-center px-2 py-1 bg-gray-50 text-xs font-medium text-gray-700 hover:text-academic-blue border border-gray-200 rounded transition-colors">
+                            <i class="fas fa-file-pdf mr-1.5"></i> PDF
+                        </a>
+                    </div>
+                </article>
+
+                <article class="group">
+                    <h3 class="text-base font-bold text-gray-900 mb-1">
+                        Evaluating the Impact of Noisy Point Clouds on Wireless Gesture Recognition Systems
+                    </h3>
+                    <div class="text-gray-700 text-sm mb-1">
+                        <span class="font-semibold border-b border-gray-300">Paul Jiang</span>, E. Fassman, et al.
+                    </div>
+                    <div class="text-sm text-gray-500 italic">
                         ACM MobiHoc '23
                     </div>
-                </div>
+                </article>
 
             </div>
         </section>
 
-        <section id="experience" class="scroll-mt-24 border-t border-gray-100 pt-10">
-             <div class="flex justify-between items-baseline mb-6">
-                <h2 class="text-2xl font-serif font-bold text-gray-900">Experience</h2>
-            </div>
+        <section id="experience" class="border-t border-gray-200 pt-8">
+             <h2 class="text-xl font-serif font-bold text-gray-900 mb-6">Experience</h2>
             
-            <div class="space-y-8">
-                <div>
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline">
-                        <h3 class="text-lg font-bold text-gray-900">University of Utah</h3>
-                        <span class="text-sm text-gray-500 font-mono">May 2025 - Present</span>
+            <div class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1 sm:gap-4">
+                    <div>
+                        <h3 class="text-base font-bold text-gray-900">University of Utah</h3>
+                        <div class="text-sm font-medium text-gray-700">Research Assistant</div>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Formally characterizing numerical deviations of NVIDIA Tensor Cores and deriving error bounds.
+                        </p>
                     </div>
-                    <div class="text-gray-700 font-medium">Research Assistant</div>
-                    <p class="text-gray-600 text-sm mt-1">
-                        Formally characterizing numerical deviations of NVIDIA Tensor Cores and deriving error bounds.
-                    </p>
+                    <div class="text-xs font-mono text-gray-500 text-right pt-0.5">May 2025 - Present</div>
                 </div>
 
-                <div>
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline">
-                        <h3 class="text-lg font-bold text-gray-900">Purdue University</h3>
-                        <span class="text-sm text-gray-500 font-mono">Dec 2024 - Present</span>
+                <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1 sm:gap-4">
+                    <div>
+                        <h3 class="text-base font-bold text-gray-900">Purdue University</h3>
+                        <div class="text-sm font-medium text-gray-700">Research Assistant</div>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Conducting differential Zonotope-based verification of token pruning on Vision Transformers.
+                        </p>
                     </div>
-                    <div class="text-gray-700 font-medium">Research Assistant</div>
-                    <p class="text-gray-600 text-sm mt-1">
-                        Conducting differential Zonotope-based verification of token pruning on Vision Transformers.
-                    </p>
+                    <div class="text-xs font-mono text-gray-500 text-right pt-0.5">Dec 2024 - Present</div>
                 </div>
 
-                <div>
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-baseline">
-                        <h3 class="text-lg font-bold text-gray-900">NSF I-GUIDE</h3>
-                        <span class="text-sm text-gray-500 font-mono">Aug 2024 - May 2025</span>
+                <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-1 sm:gap-4">
+                    <div>
+                        <h3 class="text-base font-bold text-gray-900">NSF I-GUIDE</h3>
+                        <div class="text-sm font-medium text-gray-700">Geospatial Data Science Research Intern</div>
+                        <p class="text-sm text-gray-600 mt-1">
+                             Optimized social vulnerability analysis of aging dam infrastructure using Apache Spark and Sedona.
+                        </p>
                     </div>
-                    <div class="text-gray-700 font-medium">Geospatial Data Science Research Intern</div>
-                    <p class="text-gray-600 text-sm mt-1">
-                         Optimized social vulnerability analysis of aging dam infrastructure using Apache Spark and Sedona.
-                    </p>
+                    <div class="text-xs font-mono text-gray-500 text-right pt-0.5">Aug 2024 - May 2025</div>
                 </div>
             </div>
         </section>
 
-        <footer class="bg-gray-50 border-t border-gray-100 mt-20">
-            <div class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2025 Paul Jiang.</p>
+        <footer class="mt-12 border-t border-gray-200">
+            <div class="max-w-5xl mx-auto py-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <p>&copy; 2025 Paul Jiang. Built with Tailwind CSS.</p>
                 <p>Last updated: <script>document.write(new Date().toLocaleDateString())</script></p>
             </div>
         </footer>
