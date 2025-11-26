@@ -36,28 +36,23 @@
         .prose-link { @apply text-academic-blue hover:text-blue-800 underline decoration-1 underline-offset-2 transition-colors; }
     </style>
 </head>
-<!-- 1. Changed body background to light gray to make the "paper" pop -->
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed selection:bg-academic-blue selection:text-white pb-10 sm:pb-10">
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed selection:bg-academic-blue selection:text-white pb-10 sm:pb-12">
 
-    <!-- 2. WRAPPER: This creates the "Page/Frame" effect for the whole site -->
-    <!-- Added: max-w-5xl, margins, white bg, border, and the specific shadow you liked -->
-    <div class="max-w-5xl mx-auto sm:my-12 bg-white border border-gray-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] min-h-screen sm:min-h-[calc(100vh-6rem)] relative">
-
-        <!-- Nav: Removed 'sticky', 'backdrop-blur' and container constraints (since parent handles width) -->
-        <nav class="border-b border-gray-100 pt-2">
-            <div class="px-6 sm:px-10 lg:px-12">
-                <div class="flex justify-end h-16">
-                    <div class="hidden sm:flex items-center space-x-8">
-                        <a href="#about" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">About</a>
-                        <a href="#news" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">News</a>
-                        <a href="#publications" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">Research</a>
-                        <a href="#experience" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">Experience</a>
-                    </div>
+    <nav class="sticky top-0 z-50 bg-gray-100/95 backdrop-blur-sm border-b border-gray-200/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-end h-16">
+                <div class="hidden sm:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">About</a>
+                    <a href="#news" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">News</a>
+                    <a href="#publications" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">Research</a>
+                    <a href="#experience" class="text-sm font-medium text-gray-600 hover:text-academic-blue transition-colors">Experience</a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Main: Removed max-w constraints (handled by wrapper) -->
+    <div class="max-w-5xl mx-auto mt-6 bg-white border border-gray-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] min-h-[calc(100vh-8rem)]">
+
         <main class="px-6 sm:px-10 lg:px-12 py-10 space-y-12">
 
             <section id="about">
@@ -83,7 +78,7 @@
 
                     <div class="w-full md:w-1/4 flex-shrink-0 order-1 md:order-2">
                         
-                        <!-- Kept the photo frame effect here too as a nested detail -->
+                        <!-- Profile Image Frame -->
                         <div class="bg-white p-1.5 border border-gray-200 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                             <div class="aspect-square relative bg-gray-50 overflow-hidden">
                                 <img 
