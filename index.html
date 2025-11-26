@@ -60,7 +60,7 @@
 
             <div class="flex flex-col md:flex-row gap-8 items-start">
                 
-                <div class="w-full md:w-3/4">                    
+                <div class="w-full md:w-3/4 order-2 md:order-1">                    
                     <div class="prose text-gray-700 space-y-4 leading-7 text-[1.05rem]">
                         <p>
                             I am a senior at <span class="font-semibold text-gray-900">Purdue University</span> (John Martinson Honors College) pursuing a B.S. in Computer Science with a minor in Mathematics.
@@ -72,24 +72,26 @@
                             Currently, I am working with <a href="#" class="prose-link">Prof. Ganesh Gopalakrishnan</a> at the University of Utah on formally characterizing Tensor Core arithmetic, and with <a href="#" class="prose-link">Prof. Jingbo Wang</a> at Purdue on differential Zonotope-based verification of Vision Transformers.
                         </p>
                     </div>
-
-                    <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 items-center text-sm">
-                        <span class="font-semibold text-gray-900">Contact:</span>
-                        <a href="mailto:jiang861@purdue.edu" class="flex items-center text-gray-600 hover:text-academic-blue transition-colors">
-                            <i class="fas fa-envelope mr-2 text-gray-400"></i> jiang861@purdue.edu
-                        </a>
-                        <a href="https://www.linkedin.com/in/pauljiang03" target="_blank" class="flex items-center text-gray-600 hover:text-academic-blue transition-colors">
-                            <i class="fab fa-linkedin mr-2 text-gray-400"></i> LinkedIn
-                        </a>
-                         <a href="cv.pdf" class="flex items-center text-gray-600 hover:text-academic-blue transition-colors">
-                            <i class="fas fa-file-pdf mr-2 text-gray-400"></i> CV
-                        </a>
-                    </div>
                 </div>
 
-                <div class="w-full md:w-1/4 flex-shrink-0 flex justify-center md:justify-end">
-                    <div class="w-48 md:w-full aspect-square bg-gray-100 rounded-lg overflow-hidden relative shadow-sm border border-gray-100">
+                <div class="w-full md:w-1/4 flex-shrink-0 order-1 md:order-2">
+                    <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden relative shadow-sm border border-gray-100">
                         <img src="profile.jpg" alt="Paul Jiang" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Paul+Jiang&background=random&size=200'">
+                    </div>
+
+                    <div class="mt-4 flex flex-col space-y-2">
+                        <a href="mailto:jiang861@purdue.edu" class="flex items-center group">
+                            <div class="w-8 flex justify-center text-gray-400 group-hover:text-academic-blue transition-colors"><i class="fas fa-envelope"></i></div>
+                            <span class="text-sm text-gray-600 group-hover:text-academic-blue transition-colors">Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pauljiang03" target="_blank" class="flex items-center group">
+                            <div class="w-8 flex justify-center text-gray-400 group-hover:text-academic-blue transition-colors"><i class="fab fa-linkedin"></i></div>
+                            <span class="text-sm text-gray-600 group-hover:text-academic-blue transition-colors">LinkedIn</span>
+                        </a>
+                         <a href="cv.pdf" class="flex items-center group">
+                            <div class="w-8 flex justify-center text-gray-400 group-hover:text-academic-blue transition-colors"><i class="fas fa-file-pdf"></i></div>
+                            <span class="text-sm text-gray-600 group-hover:text-academic-blue transition-colors">Curriculum Vitae</span>
+                        </a>
                     </div>
                 </div>
 
